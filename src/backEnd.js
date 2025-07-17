@@ -1,6 +1,6 @@
 const gameData = {
     characters: [
-        { id: 'pirata', name: 'Pirata', icon: '🏴‍☠️', color: 'bg-gray-700',
+        { id: 'pirata', name: 'Pirata', icon: '', color: 'bg-gray-700',
             concept: 'Combatente focado em dano e ganho material, com alto risco e alta recompensa.',
             passive: { name: 'Cobiça por Tesouros', desc: 'Sempre que um baú é encontrado, tem prioridade para pegar um item. Não pode ler pergaminhos sem a ajuda do Elfo.' },
             active1: { name: 'Golpe de Sabre', desc: 'Um ataque corpo a corpo padrão. Causa 1x de dano.' },
@@ -8,7 +8,7 @@ const gameData = {
             weakness: { name: 'Defesa Frágil', desc: 'Recebe 1.5x de dano de ataques de monstros "pesados" ou chefes.' },
             stats: { 'Dano': 5, 'Suporte': 1, 'Controle': 1, 'Sobrevivência': 2 }
         },
-        { id: 'bruxa', name: 'Bruxa', icon: '🧙‍♀️', color: 'bg-purple-700',
+        { id: 'bruxa', name: 'Bruxa', icon: '', color: 'bg-purple-700',
             concept: 'Suporte e controle do campo de batalha, com a perigosa mecânica da maldição.',
             passive: { name: 'Marca da Maldição', desc: 'Começa o jogo com 1 ponto de "Corrupção". É mais suscetível aos sussurros do Dragão.' },
             active1: { name: 'Preparar Poção', desc: 'Usa ingredientes (coletados pelo Fauno) para criar poções de cura, veneno ou proteção.' },
@@ -16,7 +16,7 @@ const gameData = {
             weakness: { name: 'Vulnerabilidade Sagrada', desc: 'Recebe 1.5x de dano de fontes Sagradas.' },
             stats: { 'Dano': 2, 'Suporte': 4, 'Controle': 5, 'Sobrevivência': 3 }
         },
-        { id: 'duende', name: 'Duende', icon: '🛠️', color: 'bg-orange-700',
+        { id: 'duende', name: 'Duende', icon: '', color: 'bg-orange-700',
             concept: 'O artesão do grupo, capaz de melhorar equipamentos, mas psicologicamente vulnerável.',
             passive: { name: 'Mestre Ferreiro', desc: 'Armas criadas por ele ignoram resistências de outros Duendes.' },
             active1: { name: 'Fortificar Equipamento', desc: 'Concede +1 de defesa a um aliado por uma batalha.' },
@@ -24,7 +24,7 @@ const gameData = {
             weakness: { name: 'Crise de Inferioridade', desc: 'Rola com desvantagem em testes de carisma. Mais propenso a falhar em testes de vontade.' },
             stats: { 'Dano': 3, 'Suporte': 3, 'Controle': 2, 'Sobrevivência': 4 }
         },
-        { id: 'sereia', name: 'Sereia', icon: '🧜‍♀️', color: 'bg-blue-700',
+        { id: 'sereia', name: 'Sereia', icon: '', color: 'bg-blue-700',
             concept: 'Manipuladora social e de campo de batalha, poderosa na água, mas vulnerável em terra.',
             passive: { name: 'Anfíbia', desc: 'Move-se sem penalidades na água. Em terra, sua velocidade é reduzida pela metade.' },
             active1: { name: 'Canto da Sereia', desc: 'Tenta hipnotizar inimigos em uma área, fazendo-os perder o próximo turno. Recarga de 3 turnos.' },
@@ -32,7 +32,7 @@ const gameData = {
             weakness: { name: 'Vulnerabilidade a Fogo', desc: 'Recebe 1.5x de dano de ataques de Fogo.' },
             stats: { 'Dano': 1, 'Suporte': 2, 'Controle': 4, 'Sobrevivência': 2 }
         },
-        { id: 'elfo', name: 'Elfo', icon: '🧝', color: 'bg-green-700',
+        { id: 'elfo', name: 'Elfo', icon: '', color: 'bg-green-700',
             concept: 'O pilar de integridade e sabedoria do grupo. Guerreiro e erudito.',
             passive: { name: 'Mente Virtuosa', desc: 'Imune a efeitos de hipnose e controle mental de fontes normais.' },
             active1: { name: 'Ativar Runa', desc: 'Inscreve uma runa em uma arma aliada, dando a ela um bônus por uma batalha (+1 de dano ou dano elemental).' },
@@ -40,7 +40,7 @@ const gameData = {
             weakness: { name: 'Orgulho Ancestral', desc: 'Pode recusar ajuda ou itens de raças que considera "inferiores".' },
             stats: { 'Dano': 4, 'Suporte': 2, 'Controle': 3, 'Sobrevivência': 3 }
         },
-        { id: 'ser-pequeno', name: 'Ser Pequeno', icon: '👣', color: 'bg-yellow-700',
+        { id: 'ser-pequeno', name: 'Ser Pequeno', icon: '', color: 'bg-yellow-700',
             concept: 'O batedor furtivo e astuto, excelente em evitar conflitos e explorar.',
             passive: { name: 'Pés Leves', desc: 'Maior chance de não ser percebido e pode evitar batalhas aleatórias.' },
             active1: { name: 'Camuflagem', desc: 'Fica invisível aos inimigos até seu próximo ataque, se estiver perto de cobertura.' },
@@ -48,7 +48,7 @@ const gameData = {
             weakness: { name: 'Força Limitada', desc: 'Causa 0.75x de dano com armas pesadas e falha em testes de força.' },
             stats: { 'Dano': 1, 'Suporte': 3, 'Controle': 3, 'Sobrevivência': 4 }
         },
-        { id: 'fauno', name: 'Fauno', icon: '🐐', color: 'bg-lime-700',
+        { id: 'fauno', name: 'Fauno', icon: '', color: 'bg-lime-700',
             concept: 'O coração do grupo. Suporte focado em cura e recursos.',
             passive: { name: 'Harmonia com a Natureza', desc: 'Pode coletar ingredientes para a Bruxa em florestas. É menos visado por bestas.' },
             active1: { name: 'Canção da Floresta', desc: 'Cura uma pequena quantidade de vida de todos os aliados próximos.' },
@@ -56,7 +56,7 @@ const gameData = {
             weakness: { name: 'Pacifista', desc: 'Causa apenas 0.5x de dano em qualquer ataque e não pode usar armas letais.' },
             stats: { 'Dano': 1, 'Suporte': 5, 'Controle': 2, 'Sobrevivência': 3 }
         },
-        { id: 'fenix', name: 'Fênix', icon: '🔥', color: 'bg-red-700',
+        { id: 'fenix', name: 'Fênix', icon: '', color: 'bg-red-700',
             concept: 'O "seguro de vida" do grupo, com a mecânica única de sacrifício e renascimento.',
             passive: { name: 'Imunidade ao Fogo', desc: 'Não recebe dano de fontes de fogo.' },
             active1: { name: 'Toque Flamejante', desc: 'Ataque corpo a corpo que causa dano de fogo.' },
